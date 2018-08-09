@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet/lib/ol.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/common.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/index.css">
+    <script type="text/javascript" src="scripts/lib/ol.js"></script>
+    <script type="text/javascript" src="scripts/lib/prefixfree.min.js"></script>
+    <script type="text/javascript" src="scripts/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/config/config.js"></script>
+    <title>OpenLayers example</title>
+</head>
+<body>
+
+<!--navbar-->
+<div class="topbar flex-container-row">
+    <div class="flex-container-row flex-container-center-H top-bar-logo">AKATSUKI</div>
+    <div class="flex-container-row flex-container-center-H top-bar-items"></div>
+    <div class="flex-container-row flex-container-center-H top-bar-menu"></div>
+</div>
+
+<!--信息展示-->
+<div class="figure-info flex-container-column flex-auto">
+    <div class="figure-info-items flex-container-column">
+        <div class="figure-info-item flex-container-row flex-container-center-H figure-info-Id">ID:null - null</div>
+        <p class="figure-info-item flex-container-column flex-auto flex-wrap figure-info-Coordinates">null</p>
+    </div>
+</div>
+
+<!--controls-->
+<div class="controls-container flex-container-row">
+
+    <div class="map-switcher flex-container-row flex-container-center-V-H flex-auto">
+        <div class="switcher-item flex-item switcher-item-active">百度地图</div>
+        <div class="switcher-item flex-item">天地图</div>
+        <div class="switcher-item flex-item">高德地图</div>
+    </div>
+
+    <div class="figure-draw flex-container-row flex-container-center-V-H flex-auto">
+        <div class="draw-item flex-container-row flex-container-center-V-H" data-draw-type = 'Point'>点</div>
+        <div class="draw-item flex-container-row flex-container-center-V-H" data-draw-type = 'Circle'>圆形</div>
+        <div class="draw-item flex-container-row flex-container-center-V-H" data-draw-type = 'Square'>正方形</div>
+        <div class="draw-item flex-container-row flex-container-center-V-H" data-draw-type = 'Box'>长方形</div>
+        <div class="draw-item flex-container-row flex-container-center-V-H" data-draw-type = 'Polygon'>多边形</div>
+    </div>
+
+    <div class="figure-draw-control flex-container-row flex-container-center-V-H flex-auto">
+        <div class="draw-control-item flex-container-row flex-container-center-V-H draw-close">结束绘制</div>
+        <div class="draw-control-item flex-container-row flex-container-center-V-H draw-close">开启编辑</div>
+        <div class="draw-control-item flex-container-row flex-container-center-V-H draw-close">移除图形</div>
+    </div>
+
+</div>
+
+<!--box-->
+<div class="figure-box flex-container-column flex-container-center-V-H">
+    <div class="figure-box-collection figure-box-collection-hidden flex-container-column flex-container-center-V-H">
+        <!--<div class="figure-box-item figure-box-collection-item figure-box-collection-item-active flex-container-column flex-container-center-V-H">Point</div>-->
+    </div>
+    <div class="figure-box-item figure-box-num flex-container-row flex-container-center-V-H">0</div>
+
+</div>
+
+<!--地图容器-->
+<div id="map" class="map"></div>
+
+<script type="text/javascript" src="scripts/util/projzh.js"></script>
+<script type="text/javascript" src="scripts/logicalControls/figureControl.js"></script>
+<script type="text/javascript" src="scripts/logicalControls/mainControl.js"></script>
+<script type="text/javascript" src="scripts/pageControls/indexControl.js"></script>
+
+</body>
+</html>

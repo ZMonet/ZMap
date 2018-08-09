@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="zmap:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/zmap_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="zmap/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="zmap" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Hibernate 5.3.2-5.3.2" />
+          <element id="library" level="project" name="mysql-connector-java-8.0.11" />
+          <element id="library" level="project" name="Spring-4.3.18.RELEASE" />
+          <element id="library" level="project" name="spring-web-4.1.9.RELEASE" />
+          <element id="library" level="project" name="struts2-spring-plugin-2.5.14" />
+          <element id="library" level="project" name="Struts 2-2.5.14.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

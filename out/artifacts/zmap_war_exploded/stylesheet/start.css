@@ -1,0 +1,84 @@
+body,html{
+    width: 100%;
+    height: 100%;
+}
+#container{
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+    background-size: 45%;
+}
+
+/*topbar*/
+.topbar{
+    width: 100%;
+    height: 70px;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.top-bar-logo{
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 30px;
+    color: white;
+}
+
+.login-box-container{
+    width: 20%;
+    background-color: #fff;
+    height: 50%;
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    margin: auto 200px;
+    padding: 60px 40px;
+    box-shadow: 0 1px 5px #ccc;
+}
+
+.login-box-item{
+    margin: 5px;
+    padding: 10px 15px;
+}
+
+.login-box > .login-box-item:nth-child(1){
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0 15px;
+}
+.login-box > .login-box-item:nth-child(2){
+    padding: 0 15px;
+}
+.login-box > .login-box-item:nth-child(3){
+    padding-top: 60px;
+}
+.login-box > .login-box-item:nth-child(6){
+    color: #cccccc;
+}
+
+
+.login-box-input,.login-box-button-container{
+    height: 60px;
+    margin: 10px 5px;
+}
+.login-box-input > input,.login-box-button{
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    background-color: #fafafa;
+    padding: 10px 30px;
+}
+.login-box-button{
+    cursor: pointer;
+    background: linear-gradient(to right, #1791fc 0%, #00f2fe 100%);
+    color: rgba(255,255,255,0.8);
+    box-shadow: 0 1px 15px rgba(0, 242, 254, 0.3);
+}
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <!-- 是否启用开发模式 -->
+    <constant name="struts.devMode" value="true" />
+    <!-- 设置在class被修改时是否热加载，发布时要设置为false -->
+    <constant name="struts.convention.classes.reload" value="true" />
+    <constant name="struts.convention.exclude.parentClassLoader" value="false" />
+    <!-- 所有匹配*.action的请求都由struts2处理 -->
+    <constant name="struts.action.extension" value="action" />
+    <!--设置struts2默认的locale，决定使用哪个资源文件-->
+    <constant name="struts.locale" value="de_DE"/>
+    <!-- 是否自动加载国际化资源文件  -->
+    <constant name="struts.i18n.reload" value="true"/>
+    <!--（默认false）设置是否总是以自动装配策略创建对象-->
+    <constant name="struts.objectFactory.spring.autoWire.alwaysRespect" value="true" />
+    <!-- 让struts2支持动态方法调用 -->
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+    <!--Struts2默认临时文件存储位置-->
+    <constant name="struts.multipart.saveDir" value="/tmp"/>
+    <!--请求参数的编码方式 -->
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+
+    <package name="demo" namespace="/" extends="struts-default,json-default">
+
+        <action name="graphAction" class="graphAction" method="save">
+            <!-- 返回类型为json-->
+            <result type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+
+
+
+        <!-- class属性中不写action的路径，因为在spring已经配置过了，应该写spring中bean的id -->
+        <!--<action name="loginAction" class="loginAction">-->
+            <!--<result name="success">/WEB-INF/pages/loginSuccess.jsp</result>-->
+            <!--<result name="input">/WEB-INF/pages/login.jsp</result>-->
+        <!--</action>-->
+        <!--<action name="registerAction" class="registerAction">-->
+            <!--<result name="success">/WEB-INF/pages/register.jsp</result>-->
+            <!--<result name="input">/WEB-INF/pages/register.jsp</result>-->
+        <!--</action>-->
+    </package>
+
+</struts>

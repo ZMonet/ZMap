@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.zmonet.entity.GraphEntity" table="graph" schema="zmonet">
+        <id name="graphId">
+            <column name="graphId" sql-type="int(8)"/>
+        </id>
+        <property name="graphName">
+            <column name="graphName" sql-type="varchar(255)"/>
+        </property>
+        <property name="coordinate">
+            <column name="coordinate" sql-type="varchar(1024)" length="1024"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,80 @@
+/***
+ * created by naruto 2018/7/3
+ */
+
+
+/***
+ * 全局样式配置
+ */
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    overflow: hidden;
+}
+
+
+/* flex-style */
+.flex-container-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-container-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-container-center-V-H{
+    align-items: center;
+    justify-content: center;
+}
+.flex-container-center-V{
+    justify-content: center;
+}
+.flex-container-center-H{
+    align-items: center;
+}
+.flex-container-start-H{
+    align-items: center;
+}
+.flex-container-end-H{
+    align-items: center;
+}
+.flex-container-start-V{
+    justify-content: flex-start;
+}
+.flex-container-end-V{
+    justify-content: flex-end;
+}
+.flex-item{
+    display: flex;
+}
+.flex-inline-item{
+    display: inline-flex;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.flex-auto{
+    flex: 1;
+}
+
+/* button-active-style */
+.scale-button{
+    transform: scale(1);
+    transition: .1s;
+    -webkit-transform: scale(1);
+    transition-duration: .1s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+.scale-button:active{
+    transform: scale(0.85);
+    transition: .1s;
+    -webkit-transform: scale(0.85);
+    transition-duration: .1s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
